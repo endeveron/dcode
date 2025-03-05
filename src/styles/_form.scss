@@ -1,0 +1,19 @@
+@use 'styles/mixins';
+
+.form {
+  max-width: 20rem;
+
+  &__fields-wrapper {
+    width: 18rem;
+    padding: 2rem 0;
+  }
+
+  &__buttons-wrapper {
+    @include mixins.flex-col-center;
+    min-height: 3rem;
+  }
+
+  &-button {
+    animation: 0.35s fade ease-out;
+  }
+}

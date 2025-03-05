@@ -1,0 +1,22 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# Dependencies
+node_modules
+
+# Sensitive data
+.env.development
+.vscode
+
+# Production
+build
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Editor directories and files
+!.vscode/extensions.json
+
+# Other
+desktop.ini

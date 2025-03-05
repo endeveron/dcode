@@ -1,0 +1,40 @@
+.slider {
+  .MuiSlider-thumb {
+    color: var(--c-text-accent);
+  }
+  .MuiSlider-valueLabel {
+    opacity: 0;
+    width: 1.5rem;
+    height: 1.5rem;
+    color: var(--c-text-accent);
+    font-size: 1rem;
+    font-weight: 700;
+    line-height: 1;
+    padding: 0.5rem;
+    border-radius: 50% 50% 50% 0;
+    transform-origin: bottom left;
+    background: unset;
+    background-color: black;
+    transform: translate(50%, -100%) rotate(-45deg) scale(0);
+    transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out;
+
+    &:before {
+      display: none;
+    }
+
+    &.MuiSlider-valueLabelOpen {
+      opacity: 1;
+      transform: translate(50%, -100%) rotate(-45deg) scale(1);
+    }
+
+    & > * {
+      transform: rotate(45deg);
+    }
+  }
+  .MuiSlider-markLabel {
+    color: var(--c-neutral-b);
+  }
+  .MuiSlider-markLabelActive {
+    color: var(--c-neutral-a);
+  }
+}

@@ -1,0 +1,22 @@
+@use 'styles/mixins';
+
+.nav-item {
+  $self: &;
+
+  @include mixins.flex-col-center;
+  color: var(--c-neutral-b);
+  text-decoration: none;
+
+  &--active {
+    &,
+    & #{$self}__label {
+      color: var(--c-primary-main) !important;
+    }
+  }
+
+  &__label {
+    margin-top: 0.25rem;
+    font-size: 0.685rem;
+    color: var(--c-neutral-a);
+  }
+}

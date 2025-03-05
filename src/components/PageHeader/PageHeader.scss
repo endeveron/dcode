@@ -1,0 +1,11 @@
+@use 'styles/mixins';
+
+.page-header {
+  @include mixins.flex(space-between, center);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+
+  &--no-title {
+    justify-content: flex-end;
+  }
+}

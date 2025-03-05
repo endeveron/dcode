@@ -1,0 +1,42 @@
+.modal-window {
+  $self: &;
+
+  &__content {
+    width: var(--s-modal-window-width);
+    padding: 1rem;
+  }
+
+  &__title,
+  &__text {
+    padding-right: 1rem;
+    padding-left: 1rem;
+  }
+
+  &__title {
+    padding-top: 1rem;
+    font-size: 1.25rem;
+    font-weight: 500;
+
+    &--error {
+      color: var(--c-error-main);
+    }
+
+    & + #{$self}__text {
+      padding-top: 1rem;
+      padding-bottom: 1rem;
+    }
+  }
+
+  &__text {
+    font-size: 0.875rem;
+    line-height: 1.5;
+  }
+
+  &__actions {
+    text-align: end;
+  }
+}
+
+.MuiDialog-paper {
+  border-radius: 1rem !important;
+}

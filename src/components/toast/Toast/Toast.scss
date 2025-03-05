@@ -1,0 +1,30 @@
+.toast {
+  $self: &;
+
+  &__content {
+    cursor: pointer;
+    color: white;
+    font-size: 0.875rem;
+    letter-spacing: 0.03125rem;
+    line-height: 1.25;
+    padding: 1rem 1.25rem;
+    margin-top: 0.25rem;
+    border-radius: 2px;
+  }
+
+  &--warning #{$self}__content {
+    background-color: var(--c-warning-main);
+  }
+
+  &--success #{$self}__content {
+    background-color: var(--c-success-main);
+  }
+
+  &--error #{$self}__content {
+    background-color: var(--c-error-main);
+  }
+
+  &--info #{$self}__content {
+    background-color: var(--c-info-main);
+  }
+}

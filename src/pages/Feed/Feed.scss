@@ -1,0 +1,15 @@
+@use 'styles/mixins';
+
+.feed {
+  @include mixins.flex-col-center;
+
+  &__header {
+    width: 100%;
+  }
+
+  &__content {
+    @include mixins.flex-col-center;
+    flex-grow: 1;
+    transform: translateY(-3.5rem);
+  }
+}

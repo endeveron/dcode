@@ -1,0 +1,23 @@
+.form-field {
+  $self: &;
+
+  & ~ #{$self} {
+    padding-top: 1.25rem;
+  }
+
+  input.MuiInputBase-input {
+    font-weight: 500;
+  }
+
+  p.MuiFormHelperText-root {
+    font-size: 0.85rem;
+    margin-top: 0.5rem;
+    // letter-spacing: 0.0625rem;
+    color: var(--c-text-accent--intense);
+  }
+
+  button.MuiIconButton-root {
+    margin-right: -0.25rem;
+    color: var(--c-neutral-a);
+  }
+}

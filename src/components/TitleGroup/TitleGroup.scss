@@ -1,0 +1,17 @@
+.title-group {
+  $self: &;
+
+  text-align: center;
+
+  &__title {
+    color: var(--c-text-accent);
+
+    & ~ #{$self}__subtitle {
+      padding-top: 0.75rem;
+    }
+  }
+
+  &__subtitle {
+    color: var(--c-neutral-a);
+  }
+}

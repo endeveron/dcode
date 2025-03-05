@@ -1,0 +1,203 @@
+@use 'styles/mixins';
+
+$translateY: 10rem;
+$shreddingFunc: 1s ease-in both;
+
+.code-result {
+  $self: &;
+
+  max-width: 20rem;
+  text-align: center;
+
+  &__message {
+    overflow: hidden;
+    transform: translateY(-0.5rem);
+
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      rgba(var(--c-mask), 1) 75%,
+      rgba(var(--c-mask), 0)
+    );
+    mask-image: linear-gradient(
+      to bottom,
+      rgba(var(--c-mask), 1) 75%,
+      rgba(var(--c-mask), 0)
+    );
+  }
+
+  &__text {
+    color: black;
+    font-size: 1.125rem;
+    line-height: 1.25;
+    font-weight: 500;
+    padding: 1.75rem 2rem;
+    text-align: center;
+    overflow-wrap: break-word;
+  }
+
+  &__paper {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    position: relative;
+
+    &-bg {
+      content: '';
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      position: absolute;
+      background-image: linear-gradient(
+        45deg,
+        var(--c-text-accent) 0%,
+        var(--c-bg-accent) 100%
+      );
+
+      // paper corner
+      &::before {
+        position: absolute;
+        top: -2px;
+        right: -2px;
+        width: 0;
+        content: '';
+        border-top: 2rem solid var(--c-bg-default);
+        border-left: 2rem solid var(--c-text-accent);
+        box-shadow: 0.5rem 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.15);
+      }
+    }
+
+    // red line
+    &::before {
+      content: '';
+      position: absolute;
+      width: 0;
+      opacity: 0;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      width: 100%;
+      background-color: rgb(183, 20, 20);
+      transition: opacity 0.5s;
+    }
+  }
+
+  &__text {
+    position: relative;
+    z-index: 2;
+  }
+
+  &__shredder {
+    width: 100%;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 0;
+      top: 0;
+      left: 0;
+      z-index: 0;
+
+      background: repeating-linear-gradient(
+        to right,
+        var(--c-text-accent),
+        var(--c-text-accent) 0.25rem,
+        transparent 0.25rem,
+        transparent 0.5rem
+      );
+    }
+  }
+
+  &__button--fixed-width #{$self}__main-button {
+    width: 10rem;
+  }
+
+  &--copied {
+    #{$self}__paper-bg,
+    #{$self}__text {
+      animation: paper $shreddingFunc;
+    }
+
+    #{$self}__shredder {
+      &:before {
+        animation: shredder $shreddingFunc;
+      }
+    }
+
+    #{$self}__paper {
+      &:before {
+        z-index: 2;
+        opacity: 1;
+        transform: scaleX(1);
+        box-shadow: 0 0 1rem 0.125rem red;
+        animation: 0.25s line 0.75s ease-in both;
+      }
+
+      // paper corner
+      &-bg::before {
+        opacity: 0;
+        transition: opacity 0.2s;
+        transition-delay: 0.15s;
+      }
+    }
+
+    #{$self}__button--fixed-width {
+      color: var(--c-text-accent);
+      pointer-events: none;
+    }
+  }
+
+  &__buttons-wrapper {
+    @include mixins.flex;
+    justify-content: space-between;
+  }
+}
+
+@keyframes paper {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY($translateY);
+  }
+}
+
+@keyframes shredder {
+  0% {
+    height: 0;
+    opacity: 1;
+  }
+  85% {
+    opacity: 0;
+  }
+  100% {
+    height: $translateY;
+    opacity: 0;
+  }
+}
+
+@keyframes line {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0);
+  }
+}
+
+.dev {
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(var(--c-mask), 1),
+    rgba(var(--c-mask), 0)
+  );
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(var(--c-mask), 1),
+    rgba(var(--c-mask), 0)
+  );
+}

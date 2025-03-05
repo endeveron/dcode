@@ -1,0 +1,15 @@
+$gap: 0.5rem;
+
+:root {
+  --s-gap: #{$gap};
+  --s-padding-v: #{$gap};
+  --s-padding-h: #{$gap};
+  --s-scroll-padding: 0.375rem;
+
+  --s-border-radius: 0.25rem;
+  --s-border-radius-m: 0.5rem;
+  --s-border-radius-l: 1rem;
+
+  --s-modal-window-width: 18rem;
+  --s-bottom-navigation-height: 4rem;
+}

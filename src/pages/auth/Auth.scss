@@ -1,0 +1,11 @@
+@use 'styles/mixins';
+
+.auth {
+  @include mixins.flex-col-center;
+
+  &__link-wrapper {
+    color: var(--c-neutral-a);
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+}

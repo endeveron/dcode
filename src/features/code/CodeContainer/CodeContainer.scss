@@ -1,0 +1,25 @@
+@use 'styles/mixins';
+
+.code-container {
+  .form__fields-wrapper,
+  .code-result__message {
+    @include mixins.flex-col-center;
+    height: 13.5rem;
+  }
+
+  .form {
+    &__fields-wrapper {
+      padding: 0;
+
+      > * {
+        width: 100%;
+      }
+    }
+    &-field {
+      height: 6rem;
+    }
+    button {
+      width: 12rem;
+    }
+  }
+}

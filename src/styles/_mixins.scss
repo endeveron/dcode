@@ -1,0 +1,42 @@
+%flex {
+  display: flex;
+}
+
+%flex-col {
+  @extend %flex;
+  flex-direction: column;
+}
+
+%centered {
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex($justify-content: flex-start, $align-items: flex-start) {
+  @extend %flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin flex-col($justify-content: flex-start, $align-items: flex-start) {
+  @extend %flex-col;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin flex-center {
+  @extend %flex;
+  @extend %centered;
+}
+
+@mixin flex-col-center {
+  @extend %flex-col;
+  @extend %centered;
+}
+
+/* solves sticky problem */
+@mixin hover {
+  @media (hover: hover) {
+    @content;
+  }
+}

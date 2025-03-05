@@ -1,0 +1,320 @@
+$cl-text-main: rgba(0, 0, 0, 0.87);
+$cd-text-main: rgba(255, 255, 255, 0.85);
+
+$cl-text-inverse: rgba(255, 255, 255, 0.85);
+$cd-text-inverse: rgba(0, 0, 0, 0.87);
+
+$cl-text-accent: #e3bc7f;
+$cd-text-accent: #efcf9b;
+
+$cl-text-accent--intense: #ffe5b9;
+$cd-text-accent--intense: #ffe5b9;
+
+$cl-bg-accent: #e3bc7f;
+$cd-bg-accent: #cba465;
+
+$cl-main--intense: black;
+$cd-main--intense: white;
+
+// neutral
+
+$cl-neutral-a: rgba(0, 0, 0, 0.6);
+$cl-neutral-b: rgba(0, 0, 0, 0.4);
+$cl-neutral-c: rgba(0, 0, 0, 0.2);
+
+$cd-neutral-a: rgba(255, 255, 255, 0.5);
+$cd-neutral-b: rgba(255, 255, 255, 0.35);
+$cd-neutral-c: rgba(255, 255, 255, 0.2);
+
+// border / divider
+
+$cl-border: rgba(0, 0, 0, 0.12);
+$cd-border: rgba(255, 255, 255, 0.12);
+
+$cl-divider: rgba(0, 0, 0, 0.12);
+$cd-divider: rgba(255, 255, 255, 0.12);
+
+$cl-positive: #00ad00;
+$cd-positive: #08a808;
+
+$cl-negative: #d13404;
+$cd-negative: #dc3200;
+
+// background
+
+$cl-bg-default: #ffffff;
+$cl-bg-opac: rgba(0, 0, 0, 0.025);
+$cl-bg-active: rgba(0, 0, 0, 0.05);
+$cl-bg-hover: $cl-bg-active;
+$cl-bg-paper: #ffffff;
+
+$cd-bg-default: #191919;
+$cd-bg-opac: rgba(255, 255, 255, 0.025);
+$cd-bg-active: rgba(255, 255, 255, 0.05);
+$cd-bg-hover: $cd-bg-active;
+$cd-bg-paper: #191919;
+
+$cl-mask: 255, 255, 255;
+$cd-mask: 25, 25, 25;
+
+// palette
+
+$cl-primary-light: #076baa;
+$cl-primary-main: #076baa;
+$cl-primary-dark: #076baa;
+
+$cd-primary-light: #057ab8;
+$cd-primary-main: #0571aa;
+$cd-primary-dark: #03679e;
+
+$cl-secondary-light: #b9b9b9;
+$cl-secondary-main: #a7a7a7;
+$cl-secondary-dark: #8d8d8d;
+
+$cd-secondary-light: #7a7a7a;
+$cd-secondary-main: #5c5c5c;
+$cd-secondary-dark: #414141;
+
+$cl-error-light: #ec4946;
+$cl-error-main: #e9412b;
+$cl-error-dark: #c72929;
+
+$cd-error-light: #d11212;
+$cd-error-main: #ba1111;
+$cd-error-dark: #9f0f0f;
+
+$cl-warning-light: #ff9800;
+$cl-warning-main: #ed6c02;
+$cl-warning-dark: #e65100;
+
+$cd-warning-light: #fc600d;
+$cd-warning-main: #e25306;
+$cd-warning-dark: #d34a00;
+
+$cl-info-light: #16bbd1;
+$cl-info-main: #0ca3b7;
+$cl-info-dark: #048c9e;
+
+$cd-info-light: #0aa8bd;
+$cd-info-main: #058ea0;
+$cd-info-dark: #027483;
+
+$cl-success-light: #4caf50;
+$cl-success-main: #378b3b;
+$cl-success-dark: #1b5e20;
+
+$cd-success-light: #22954e;
+$cd-success-main: #1e7e43;
+$cd-success-dark: #117150;
+
+// scrollbar
+
+$cl-scrollbar: rgba(0, 0, 0, 0.1);
+$cl-scrollbar-hover: rgba(0, 0, 0, 0.3);
+
+$cd-scrollbar: rgba(255, 255, 255, 0.075);
+$cd-scrollbar-hover: rgba(255, 255, 255, 0.3);
+
+// button
+
+// $cl-act-active:        rgba(0,0,0, 0.54);
+// $cl-act-hover:         rgba(0,0,0, 0.04);
+// $cl-act-selected:      rgba(0,0,0, 0.08);
+// $cl-act-disabled:      rgba(0,0,0, 0.26);
+// $cl-act-disabled-bg:   rgba(0,0,0, 0.12);
+
+// $cd-act-active:        #ffffff;
+// $cd-act-hover:         rgba(255,255,255, 0.08);
+// $cd-act-selected:      rgba(255,255,255, 0.16);
+// $cd-act-disabled:      rgba(255,255,255, 0.3);
+// $cd-act-disabled-bg:   rgba(255,255,255, 0.12);
+
+:root {
+  --c-text-main: #{$cl-text-main};
+  --c-main--intense: #{$cl-main--intense};
+  --c-text-inverse: #{$cl-text-inverse};
+
+  --c-text-accent: #{$cl-text-accent};
+  --c-text-accent--intense: #{$cl-text-accent--intense};
+  --c-bg-accent: #{$cl-bg-accent};
+
+  --c-neutral-a: #{$cl-neutral-a};
+  --c-neutral-b: #{$cl-neutral-b};
+  --c-neutral-c: #{$cl-neutral-c};
+
+  --c-border: #{$cl-border};
+  --c-divider: #{$cl-divider};
+
+  --c-positive: #{$cl-positive};
+  --c-negative: #{$cl-negative};
+
+  --c-primary-main: #{$cl-primary-main};
+  --c-primary-light: #{$cl-primary-light};
+  --c-primary-dark: #{$cl-primary-dark};
+
+  --c-secondary-main: #{$cl-secondary-main};
+  --c-secondary-light: #{$cl-secondary-light};
+  --c-secondary-dark: #{$cl-secondary-dark};
+
+  --c-error-main: #{$cl-error-main};
+  --c-error-light: #{$cl-error-light};
+  --c-error-dark: #{$cl-error-dark};
+
+  --c-warning-main: #{$cl-warning-main};
+  --c-warning-light: #{$cl-warning-light};
+  --c-warning-dark: #{$cl-warning-dark};
+
+  --c-info-main: #{$cl-info-main};
+  --c-info-light: #{$cl-info-light};
+  --c-info-dark: #{$cl-info-dark};
+
+  --c-success-main: #{$cl-success-main};
+  --c-success-light: #{$cl-success-light};
+  --c-success-dark: #{$cl-success-dark};
+
+  --c-bg-default: #{$cl-bg-default};
+  --c-bg-opac: #{$cl-bg-opac};
+  --c-bg-hover: #{$cl-bg-hover};
+  --c-bg-paper: #{$cl-bg-paper};
+  --c-bg-active: #{$cl-bg-active};
+
+  --c-mask: #{$cl-mask};
+
+  --c-scrollbar: #{$cl-scrollbar};
+  --c-scrollbar-hover: #{$cl-scrollbar-hover};
+}
+
+body[data-theme-mode='dark'] {
+  --c-text-main: #{$cd-text-main};
+  --c-main--intense: #{$cd-main--intense};
+  --c-text-inverse: #{$cd-text-inverse};
+
+  --c-text-accent: #{$cd-text-accent};
+  --c-text-accent--intense: #{$cd-text-accent--intense};
+  --c-bg-accent: #{$cd-bg-accent};
+
+  --c-neutral-a: #{$cd-neutral-a};
+  --c-neutral-b: #{$cd-neutral-b};
+  --c-neutral-c: #{$cd-neutral-c};
+
+  --c-border: #{$cd-border};
+  --c-divider: #{$cd-divider};
+
+  --c-positive: #{$cd-positive};
+  --c-negative: #{$cd-negative};
+
+  --c-primary-main: #{$cd-primary-main};
+  --c-primary-light: #{$cd-primary-light};
+  --c-primary-dark: #{$cd-primary-dark};
+
+  --c-secondary-main: #{$cd-secondary-main};
+  --c-secondary-light: #{$cd-secondary-light};
+  --c-secondary-dark: #{$cd-secondary-dark};
+
+  --c-error-main: #{$cd-error-main};
+  --c-error-light: #{$cd-error-light};
+  --c-error-dark: #{$cd-error-dark};
+
+  --c-warning-main: #{$cd-warning-main};
+  --c-warning-light: #{$cd-warning-light};
+  --c-warning-dark: #{$cd-warning-dark};
+
+  --c-info-main: #{$cd-info-main};
+  --c-info-light: #{$cd-info-light};
+  --c-info-dark: #{$cd-info-dark};
+
+  --c-success-main: #{$cd-success-main};
+  --c-success-light: #{$cd-success-light};
+  --c-success-dark: #{$cd-success-dark};
+
+  --c-bg-default: #{$cd-bg-default};
+  --c-bg-opac: #{$cd-bg-opac};
+  --c-bg-hover: #{$cd-bg-hover};
+  --c-bg-paper: #{$cd-bg-paper};
+  --c-bg-active: #{$cd-bg-active};
+
+  --c-mask: #{$cd-mask};
+
+  --c-scrollbar: #{$cd-scrollbar};
+  --c-scrollbar-hover: #{$cd-scrollbar-hover};
+}
+
+:export {
+  lTextPrimary: $cl-text-main;
+  lTextSecondary: $cl-neutral-a;
+  lTextDisabled: $cl-neutral-b;
+
+  dTextPrimary: $cd-text-main;
+  dTextSecondary: $cd-neutral-a;
+  dTextDisabled: $cd-neutral-b;
+
+  lPrimaryMain: $cl-primary-main;
+  lPrimaryLight: $cl-primary-light;
+  lPrimaryDark: $cl-primary-dark;
+
+  dPrimaryMain: $cd-primary-main;
+  dPrimaryLight: $cd-primary-light;
+  dPrimaryDark: $cd-primary-dark;
+
+  lSecondaryMain: $cl-secondary-main;
+  lSecondaryLight: $cl-secondary-light;
+  lSecondaryDark: $cl-secondary-dark;
+
+  dSecondaryMain: $cd-secondary-main;
+  dSecondaryLight: $cd-secondary-light;
+  dSecondaryDark: $cd-secondary-dark;
+
+  lSuccessMain: $cl-success-main;
+  lSuccessLight: $cl-success-light;
+  lSuccessDark: $cl-success-dark;
+
+  dSuccessMain: $cd-success-main;
+  dSuccessLight: $cd-success-light;
+  dSuccessDark: $cd-success-dark;
+
+  lErrorMain: $cl-error-main;
+  lErrorLight: $cl-error-light;
+  lErrorDark: $cl-error-dark;
+
+  dErrorMain: $cd-error-main;
+  dErrorLight: $cd-error-light;
+  dErrorDark: $cd-error-dark;
+
+  lWarningMain: $cl-warning-main;
+  lWarningLight: $cl-warning-light;
+  lWarningDark: $cl-warning-dark;
+
+  dWarningMain: $cd-warning-main;
+  dWarningLight: $cd-warning-light;
+  dWarningDark: $cd-warning-dark;
+
+  lInfoMain: $cl-info-main;
+  lInfoLight: $cl-info-light;
+  lInfoDark: $cl-info-dark;
+
+  dInfoMain: $cd-info-main;
+  dInfoLight: $cd-info-light;
+  dInfoDark: $cd-info-dark;
+
+  lBgDefault: $cl-bg-default;
+  lBgPaper: $cl-bg-paper;
+
+  dBgDefault: $cd-bg-default;
+  dBgPaper: $cd-bg-paper;
+
+  neutralMain: $cl-neutral-b;
+  neutralLight: $cl-neutral-c;
+  neutralDark: $cl-neutral-a;
+
+  // lightActionActive: $cl-act-active;
+  // lightActionHover: $cl-act-hover;
+  // lightActionSelected: $cl-act-selected;
+  // lightActionDisabled: $cl-act-disabled;
+  // lightActionDisabledBackground: $cl-act-disabled-bg;
+
+  // darkActionActive: $cd-act-active;
+  // darkActionHover: $cd-act-hover;
+  // darkActionSelected: $cd-act-selected;
+  // darkActionDisabled: $cd-act-disabled;
+  // darkActionDisabledBackground: $cd-act-disabled-bg;
+}

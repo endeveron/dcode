@@ -1,0 +1,12 @@
+.auth-form {
+  &__mode-toggler {
+    color: var(--c-neutral-a);
+    margin-top: 1.75rem;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  .form-button {
+    min-width: 9rem !important;
+  }
+}

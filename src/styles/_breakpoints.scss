@@ -1,0 +1,41 @@
+// device sizes
+// mob 375, tab 768, lap 1280, dsk 1920
+
+// most used min-width
+// 768 (57%), 1200 (44%), 992 (40%), 600 (31%)
+
+$br-sm: 36rem; // ≥576px
+$br-md: 48rem; // ≥768px
+$br-lg: 62rem; // ≥992px
+$br-xl: 75rem; // ≥1200px
+$br-xxl: 87.5rem; // ≥1400px
+
+@mixin sm {
+  @media (min-width: $br-sm) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: $br-md) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: $br-lg) {
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: $br-xl) {
+    @content;
+  }
+}
+
+@mixin xxl {
+  @media (min-width: $br-xxl) {
+    @content;
+  }
+}
